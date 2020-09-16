@@ -21,7 +21,7 @@ R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare an
 ## *Problemet med excell og dagens løsninger*
 
 ### **wale of London**
-Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar
+Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen de investoren brukte for å kalkulere risikoen i handelen. Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen.
 
 ## *Historisk data arkivering*
 
