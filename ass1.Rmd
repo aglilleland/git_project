@@ -2,9 +2,12 @@
 title: "R Notebook"
 output: html_notebook
 ---
-
+## Reproduserbarhet isammenheng med storedata
 ## Introduksjon
 
-Første setning
+I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med storedata. 
+
 
 ## Andre setning literatur
+
+litt mer
