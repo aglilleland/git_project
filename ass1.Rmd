@@ -1,18 +1,13 @@
 ---
-title: "R Notebook"
+title: "Reproduserbarhet isammenheng med storedata"
 output: html_notebook
 ---
-## Reproduserbarhet isammenheng med storedata
-## Introduksjon
 
-I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med storedata. 
+## *Introduksjon*
 
-
-## Andre setning literatur
-
-litt mer gagasgas 
+I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med storedata.
 
 
-Tredje setning
+## *Hvorfor R?*
 
-Ferdje setning
+
