@@ -1,5 +1,5 @@
 ---
-title: "Reproduserbarhet isammenheng med storedata"
+title: "Reproduserbarhet i sammenheng med storedata"
 output: html_notebook
 ---
 
@@ -8,6 +8,27 @@ output: html_notebook
 I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med storedata.
 
 
-## *Hvorfor R?*
+## *Reproduserbarhet og replikerbarhet*
+
+### **R-notebooks**
+
+## *Problemet med excell og dagens løsninger*
+
+### **wale of London**
+
+## *Historisk data arkivering*
+
+## *Løser R notebooks problemet med reproduserbarhet?*
+
+## *Code chunks og text chunks*
+
+## *Reproduserbarhet i ulike sektorer*
+
+
+## *Konklusjon*
+
+# ***Litteraturliste***
+
+
 
 
