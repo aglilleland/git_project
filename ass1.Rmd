@@ -10,6 +10,9 @@ I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeide
 
 ## *Reproduserbarhet og replikerbarhet*
 
+### **Hvorfor R og R studio?**
+Både R og R studio er åpen kildekode programvarer og er gratis. Det brukes i sammenheng med forskning og datavisualisering. R gjør sammarbeid enklere via feks. Git og Github. Analyser gjort i R og R studio er reproduserbare. Man kan importere og manipulere data og kjøre dette i ett maskinlæringsprogramm via R studio. Skal man kjøre linerar regrisjon eller lignende kan man bruke R og R studio.   
+
 ### **R-notebooks**
 
 ## *Problemet med excell og dagens løsninger*
