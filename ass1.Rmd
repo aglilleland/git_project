@@ -11,3 +11,6 @@ I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeide
 ## Andre setning literatur
 
 litt mer gagasgas 
+
+
+Tredje setning
