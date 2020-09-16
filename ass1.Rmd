@@ -15,6 +15,7 @@ I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeide
 ## *Problemet med excell og dagens løsninger*
 
 ### **wale of London**
+Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar
 
 ## *Historisk data arkivering*
 
