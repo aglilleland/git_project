@@ -5,17 +5,15 @@ output: html_notebook
 
 ## *Introduksjon*
 
-I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med storedata.Vi vil se på hva R og R-studio er, og hvordan dette kan hjelpe oss med reproduserbarhet og replikerbarhet. 
+I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med store data.Vi vil se på hva *R* og *R-studio* er, og hvordan dette kan hjelpe oss med reproduserbarhet og replikerbarhet. Vi vil også forklare hva *R-markdown* og *R-Notebook* er.  
 
 ## *Reproduserbarhet og replikerbarhet*
 
 ### **Hvorfor R og R studio?**
 Både R og R studio er åpen kildekode programvarer og er gratis. Det brukes i sammenheng med forskning og datavisualisering. R er ett kodespråk for statistisk databehandling og grafikk, mens R-studio er ett integrert utviklingsmiljø for R. R og R studio gjør sammarbeid enklere via feks. Git og Github. Analyser gjort i R og R studio er reproduserbare. Man kan importere og manipulere data og kjøre dette i ett maskinlæringsprogramm via R studio. Skal man kjøre linerar regrisjon eller lignende kan man bruke R og R studio.   
 
-### **R-markdown**
-R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare analyser (kilde). R koder, kommentarer, metadata ligger da inni det samme dokumentet. Dette gjør at man i etterkant kan se hvilke data som har blitt brukt. Hvilke formler som er brukt for å få svarene i analysen. Alt som har blitt gjort i analysen kan bli funnet igjen. Det er ikke gjort analyser separert hvor svarene har blitt plottet inn i dokumentet i etterkant. 
-
-### **R-notebooks**
+### **R-markdown og R-notebooks**
+R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare analyser (kilde). R koder, kommentarer, metadata ligger da inni det samme dokumentet. Dette gjør at man i etterkant kan se hvilke data som har blitt brukt. Hvilke formler som er brukt for å få svarene i analysen. Alt som har blitt gjort i analysen kan bli funnet igjen. Det er ikke gjort analyser separert hvor svarene har blitt plottet inn i dokumentet i etterkant.Dette dokumentet er skrevet med R notebook, som er et r-markdown dokument med kode "chunks" som kan utføres uavhengig og interaktivt, hvor resultatet er synlig med en gang. Dokumentet blir en blanding av vanlig skrift og koder, noe som gjør det svært effektivt iforhold til andre skriveprogrammer. Kodene som brukes er ikke synlige i det endelige resultatet som blir publisert, kun resultatene av disse kodene. Ønsker man derrimot å se hvilke koder som er blitt brukt er det mulig i etterkant. Dette gjør at dokumentet blir reproduserbart.
 
 ## *Problemet med excell og dagens løsninger*
 
