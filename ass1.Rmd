@@ -25,6 +25,7 @@ Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, ak
 
 ## *Historisk data arkivering*
 
+
 ## *Løser R notebooks problemet med reproduserbarhet?*
 
 ## *Code chunks og text chunks*
