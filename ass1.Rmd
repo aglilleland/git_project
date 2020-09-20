@@ -89,7 +89,7 @@ summary(iris)
 plot(iris)
 ```
 
-### Sessioninfo forklart og demonstrert
+### **Sessioninfo forklart og demonstrert**
 
 Sessioninfo, samler og viser informasjon om den nåværende økten som kjører i R. Informasjonen inneholder for eksempel, R versjonen som kjører, operativsystemet som er brukt og de ulike packages som er lastet. Dette er brukbart for å undersøke mulige feil og avvik, og bidrar til å gjøre prosjektet mer reproduserbart ved å gi oss mer informasjon slik at det for eksempel i fremtiden skal bli lett å reprodusere dette datasettet uavhengig av hva du kjører. Sessioninfo vil derfor hjelpe med å gjøre dette lettere ved å gi oss mer informasjon om økten. Nedenfor er dette demonstrert
 
@@ -97,7 +97,7 @@ Sessioninfo, samler og viser informasjon om den nåværende økten som kjører i
 sessionInfo()
 ```
 
-## Ulike overskrifter og visuelle skrivemåter
+## **Ulike overskrifter og visuelle skrivemåter**
 
 Forskjellige stiler på skrift, demonstrert nedenfor. 
 
@@ -116,13 +116,13 @@ Man kan justere størrelse på heading slik, ved å bruke hashtag og antall i le
 ###### Heihei lvl 6
 
 
-## Har forskerne incentiver til å være "Reproduserbare" eller må de tvinges? 
+## **Har forskerne incentiver til å være "Reproduserbare" eller må de tvinges?** 
 
 Et av vilkårene for pålitelig vitenskapelig arbeid, er reproduserbarhet. Dette betyr at hvis en annen forsker gjentar undersøkelsen og målingen ved like betingelser og underliggende faktorer Er det betryggende å få tilsvarende (like) resultater. En høy reproduserbarhet uttrykkes som reliabilitet (Bartlett & Frost, 2008). Det er også viktig å være oppmerksom på at noen av målingene gir lik resultat, uavhengig av hvor, når og hvilken forsker som gjennomfører det. For eksempel, kjemiske analyser i et laboratorium må ha i utgangspunkt høy reproduserbarhet, og at målinger av studien kan etterprøves. Et annet eksempel er markedsundersøkelser som utforsker meninger om produkter, tjenester og kjøpemønstre. 
 
 Målinger i sammfunnsvitenskapelig perspektiv innebærer mange kontekstuelle betingelser, som gjør at resultatet ikke er reproduserbar. For eksempel måling av hvordan folk reagerer på nyheter i konkrete politiske atmosfære, eller hvordan velgerne reagerer på kandidater i politiske kampanjer og hvilke saker som er viktige for dem ved valg. Dette er noe som ikke er veldig reproduserbart, Forskjere som jobber med store datasett er nærmest nesten avhengig av å kunne reprodusere det de jobber med, dette er for å finne ulike avvik og feil i modellen som blir brukt. Økonomiske modeller som er forsket på må for eksempel kunne bli reprodusert, likt alle andre kvantitative felt innen forsking. Derfor er det Forskere har dermed incentiver til å ivareta datasett og kunne reprodusere modeller i framtiden. 
 
-## Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff? 
+## **Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff?** 
 
 Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett, materiale og utvikling av dataprogrammer og pakker innenfor ulike programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet. Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske journaler viktigere framover.
 
