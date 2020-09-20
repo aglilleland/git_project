@@ -25,6 +25,9 @@ R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare an
 
 Det kan være ulike grunner til at studier ikke er reproduserbare og/eller replikerbare. En årsak kan være feilaktig forkastning av null hypotesen. Dette kan være resultat av feil i analysen eller ett dårlig utvalg. Det kan også være ett resultat av feilaktig innplotting som har gått uanmerket. Når analysen blir gjort på ny igjen vil resultatet bli annerledes. Innen psykologifaget ble det gjort en undersøkelse hvor de prøvde å replikere 100 undersøkelser fra de siste 3 årene som var blitt publisert i de tre mest respekterte journalene innenfor faget. De fant ut att effektene fra funnene i disse studiene ble halvert etter at de ble gjennomført på ny (replikert).De fant også at i <span style="color:red"> 95% </span> av de orginale undersøkelsen hadde de fått ett signifikans nivå på 0,05 eller under, mens etter at undersøkelsen ble utført på ny var det kun <span style="color:red"> 36% </span> som hadde ett signifikant resultat.
 
+### **Problemet med excell og dagens løsninger**
+Dagens bruk av systemer som excel kan gjøre arbeidet med store data sett vansklig og uoversiktlig. Små feil gjort innefor en av "cellene" kan fort oversees, samt føre til at resultatet endres uten at det merkes. Når slike feil blir gjort er de vanskelige å identifisere hvis det er mange data. Prøver man å reprodusere studien ender man opp med ett annet svar en den orginale studien uten å finne årsaken til feilen. 
+
 ### **wale of London**
 Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen de investoren brukte for å kalkulere risikoen i handelen. Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen.
 
