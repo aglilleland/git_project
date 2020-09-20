@@ -1,12 +1,12 @@
 ---
 title: "Reproduserbarhet i sammenheng med Stordata"
-subtitle: "Data Science Assignment HVL University"
 author: "Anne Grethe Lilleland, Arian Steen"
 date: "17/09/20"
 output:
   html_document:
     df_print: paged
-    
+  pdf_document: default
+subtitle: Data Science Assignment HVL University
 ---
 
 ## <span style="color:pink"> *Introduksjon*
@@ -31,8 +31,10 @@ R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare an
 
 Det kan være ulike grunner til at studier ikke er reproduserbare og/eller replikerbare. En årsak kan være feilaktig forkastning av null hypotesen. Dette kan være resultat av feil i analysen eller ett dårlig utvalg. Det kan også være ett resultat av feilaktig innplotting som har gått uanmerket. Når analysen blir gjort på ny igjen vil resultatet bli annerledes. Innen psykologifaget ble det gjort en undersøkelse hvor de prøvde å replikere 100 undersøkelser fra de siste 3 årene som var blitt publisert i de tre mest respekterte journalene innenfor faget. De fant ut att effektene fra funnene i disse studiene ble halvert etter at de ble gjennomført på ny (replikert).De fant også at i <span style="color:red"> 95% </span> av de orginale undersøkelsen hadde de fått ett signifikans nivå på 0,05 eller under, mens etter at undersøkelsen ble utført på ny var det kun <span style="color:red"> 36% </span> som hadde ett signifikant resultat.
 
-### **wale of London**
-Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen de investoren brukte for å kalkulere risikoen i handelen. Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen.
+### **Whale of London**
+Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen som investoren brukte for å kalkulere risikoen i handelen. 
+
+Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen. Derfor er sterkt analytisk,statistikk rettede programvarer og programmeringspråk som for eksempel "R" ofte overlegen ovenfor excel og analyse via mainstream programmvare som office suiten til Microsoft. Mange store selskap har i det siste brukt ressurser på å betale tredjeparter som jobber med datascience, for å lage modeller til forretningen sin. 
 
 ## *Historisk data arkivering*
 
@@ -95,6 +97,25 @@ Sessioninfo, samler og viser informasjon om den nåværende økten som kjører i
 sessionInfo()
 ```
 
+## Ulike overskrifter og visuelle skrivemåter
+
+Forskjellige stiler på skrift, demonstrert nedenfor. 
+
+italic, bold og italic & bold
+
+
+
+Man kan justere størrelse på heading slik, ved å bruke hashtag og antall i level, demonstrert nedenfor.
+
+### Heihei lvl 3
+
+#### Heihei lvl 4
+
+##### Heihei lvl 5
+
+###### Heihei lvl 6
+
+
 ## Har forskerne incentiver til å være "Reproduserbare" eller må de tvinges? 
 
 Et av vilkårene for pålitelig vitenskapelig arbeid, er reproduserbarhet. Dette betyr at hvis en annen forsker gjentar undersøkelsen og målingen ved like betingelser og underliggende faktorer Er det betryggende å få tilsvarende (like) resultater. En høy reproduserbarhet uttrykkes som reliabilitet (Bartlett & Frost, 2008). Det er også viktig å være oppmerksom på at noen av målingene gir lik resultat, uavhengig av hvor, når og hvilken forsker som gjennomfører det. For eksempel, kjemiske analyser i et laboratorium må ha i utgangspunkt høy reproduserbarhet, og at målinger av studien kan etterprøves. Et annet eksempel er markedsundersøkelser som utforsker meninger om produkter, tjenester og kjøpemønstre. 
@@ -103,7 +124,9 @@ Målinger i sammfunnsvitenskapelig perspektiv innebærer mange kontekstuelle bet
 
 ## Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff? 
 
-Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett, materiale og utvikling av dataprogrammer og pakker innenfor ulike programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet. Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske journaler viktigere. 
+Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett, materiale og utvikling av dataprogrammer og pakker innenfor ulike programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet. Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske journaler viktigere framover.
+
+
 
 
 
