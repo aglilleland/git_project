@@ -101,9 +101,9 @@ sessionInfo()
 
 Forskjellige stiler på skrift, demonstrert nedenfor. 
 
-italic, bold og italic & bold
+*italic*, **bold** og ***italic & bold***
 
-
+*HVL Oppgave*, **HVL Oppgave**, ***HVL Oppgave***
 
 Man kan justere størrelse på heading slik, ved å bruke hashtag og antall i level, demonstrert nedenfor.
 
