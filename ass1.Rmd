@@ -3,11 +3,20 @@ title: "Reproduserbarhet i sammenheng med storedata"
 output: html_notebook
 ---
 
-## *Introduksjon*
+## <span style="color:pink"> *Introduksjon*
 
 I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med store data.Vi vil se på hva *R* og *R-studio* er, og hvordan dette kan hjelpe oss med reproduserbarhet og replikerbarhet. Vi vil også forklare hva *R-markdown* og *R-Notebook* er.  
 
-## *Reproduserbarhet og replikerbarhet*
+## <span style="color:lightblue">*Reproduserbarhet og replikerbarhet*
+### **Hvorfor bryr vi oss om reproduserbarhet og replikerbarhet?**
+Forskere prøver ofte å reprodusere eksprimenter for å øke troverdigheten til forsøket og resultatene i eksprimentet. Hvis eksprimentet kan reproduseres og få de samme svarene øker tiltroen/tillten til resultatet.Reproduserbarhet går ut på å bruke de samme dataene som allerede er brukt i forsåket, utføre da samme analysene, og ende opp med de samme svarene.
+
+Replikerbarhet blir sett på som "gull" standarden innenfor forskning. Replikerbarhet går ut på at det skal være mulig å gjøre forsøket på nytt, med nye data, og ende opp med samme svar. Reproduserbarhet er nødvendig for å få replikerbarhet, men ikke tilstrekkelig nok til å gi replikerbarhet.
+
+Reproduserbarhet og replikerbarhet har vist seg og ikke være noen selvfølge innen forskning. Det er flere meninger og tanker rundt dette. Noen hevder forskningen burde være reproduserbar for at den skal kunne publiseres. Andre går så lang og mener den også bør kunne replikeres. Vi skal ikke gå i dybden på dette, men legger heller forkuset på ulike grunner til hvorfor forskning ikke alltid er reproduserbar eller replikerbar, og hvordan man kan unngå dette. 
+ 
+Publikasjons skjevhet går ut på hvor sannsynlig det er at en studie blir publisert basert på resultatet av studien. Iforhold til antall publiserte studier er det få som får negetivt reuslatat. Dette kan iverstefall føre til at resultater kanskje 
+
 
 ### **Hvorfor R og R studio?**
 Både R og R studio er åpen kildekode programvarer og er gratis. Det brukes i sammenheng med forskning og datavisualisering. R er ett kodespråk for statistisk databehandling og grafikk, mens R-studio er ett integrert utviklingsmiljø for R. R og R studio gjør sammarbeid enklere via feks. Git og Github. Analyser gjort i R og R studio er reproduserbare. Man kan importere og manipulere data og kjøre dette i ett maskinlæringsprogramm via R studio. Skal man kjøre linerar regrisjon eller lignende kan man bruke R og R studio.   
