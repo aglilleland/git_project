@@ -1,6 +1,12 @@
 ---
-title: "Reproduserbarhet i sammenheng med storedata"
-output: html_notebook
+title: "Reproduserbarhet i sammenheng med Stordata"
+author: "Anne Grethe Lilleland, Arian Steen"
+date: "17/09/20"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+subtitle: Data Science Assignment HVL University
 ---
 
 ## <span style="color:pink"> *Introduksjon*
@@ -25,13 +31,21 @@ R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare an
 
 Det kan være ulike grunner til at studier ikke er reproduserbare og/eller replikerbare. En årsak kan være feilaktig forkastning av null hypotesen. Dette kan være resultat av feil i analysen eller ett dårlig utvalg. Det kan også være ett resultat av feilaktig innplotting som har gått uanmerket. Når analysen blir gjort på ny igjen vil resultatet bli annerledes. Innen psykologifaget ble det gjort en undersøkelse hvor de prøvde å replikere 100 undersøkelser fra de siste 3 årene som var blitt publisert i de tre mest respekterte journalene innenfor faget. De fant ut att effektene fra funnene i disse studiene ble halvert etter at de ble gjennomført på ny (replikert).De fant også at i <span style="color:red"> 95% </span> av de orginale undersøkelsen hadde de fått ett signifikans nivå på 0,05 eller under, mens etter at undersøkelsen ble utført på ny var det kun <span style="color:red"> 36% </span> som hadde ett signifikant resultat.
 
+<<<<<<< HEAD
 ### **Problemet med excell og dagens løsninger**
 Dagens bruk av systemer som excel kan gjøre arbeidet med store data sett vansklig og uoversiktlig. Små feil gjort innefor en av "cellene" kan fort oversees, samt føre til at resultatet endres uten at det merkes. Når slike feil blir gjort er de vanskelige å identifisere hvis det er mange data. Prøver man å reprodusere studien ender man opp med ett annet svar en den orginale studien uten å finne årsaken til feilen. 
 
 ### **wale of London**
 Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen de investoren brukte for å kalkulere risikoen i handelen. Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen.
+=======
+### **Whale of London**
+Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen som investoren brukte for å kalkulere risikoen i handelen. 
+
+Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen. Derfor er sterkt analytisk,statistikk rettede programvarer og programmeringspråk som for eksempel "R" ofte overlegen ovenfor excel og analyse via mainstream programmvare som office suiten til Microsoft. Mange store selskap har i det siste brukt ressurser på å betale tredjeparter som jobber med datascience, for å lage modeller til forretningen sin. 
+>>>>>>> de1865b71725014721e944e8476cdcabfd0b250b
 
 ## *Historisk data arkivering*
+
 
 ## *Løser R notebooks problemet med reproduserbarhet?*
 
@@ -43,6 +57,83 @@ Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, ak
 ## *Konklusjon*
 
 # ***Litteraturliste***
+
+## **Innledning og Historien om "R"**
+
+Utviklingen av diverse dataprogrammer (software) har styrket analytikernes evne til å gjennomføre flerdimensjonal data-analyse. En slik type analyse, gir muligheter til å gjennomføre komplekse beregninger med svært raske resultater. Blant de ulike dataprogrammer som brukes til dette finner man, for eksempel. SPSS,STATA,EXCEL og R. Den sistnevnte "R" tilbyr unike muligheter som skiller det fra andre tilgjengelige statistiske verktøyene. Faktisk har R blitt hovedverktøyet til data-analyse. De R ekspertene som bruker R-programmet, kalles Data-Analyst eller Data Scietist, på grunn av det brede omfanget som "R" kan tilby. 
+
+I 1991 ble "R" opprettet av Ross Ihaka og Robert Gentleman i "Department of Statistics ved University of Auckland". I 1993 ble den første kunngjøringen av "R" gjort for publikum. Ross og Roberts erfaring med å utvikle "R" er dokumentert i en artikkel i det vitenskapelige journal (Ihaka,R & Gentleman,R 1996)
+
+Populæriteten til "R" kommer fra diverse kilder. For det første er den basert på multiplatform kode, som vil gjøre det mulig å bruke den på tvers av ulike platformer (Dette fører til enklere sammarbeid mellom flere parter) og åpen kildekode (Det sikrer reproduserbarheten av analysen), det blir brukt av profesjonelle i arbeidslivet, store selskaper og studenter som foreksempel (Økonomisk Data-analyse) brukt av HVL studenter innen økonomifeltet. "R" gir oss muligheten til å jobbe raskt og iretaivt med store datamengder. 
+
+For det andre, er brukervennligheten til "R" og det faktum at det finnes store mengder læremateriale åpent,fritt og lett tilgjengelig på nettet, gjør det mulig å reprodusere data, gjennomføre analyser og løse diverse problemstillinger. "R" gjør det mulig for forskere å fange opp og kommunisere detaljene i arbeidsflyten med større effektivitet. I følgende paragrafer forteller vi nærmere om hvordan disse ulike elementene øker vår mulighet til å gjennomføre en analyse ut ifra et datasett ved bruk av "R". 
+
+## **Reproduserbarhet og R-Notebooks**
+
+Repetering og intern reproduserbarhet et aspekt innen Data Science feltet, og alle som håndterer og jobber/deler store mengder data. Det handler om overensstemmelse mellom resultatene av målinger av samme målstørrelse utført under samme målebetingelser (VIM, 1993). Reproduserbarhet avspeiler i hvilken grad en har overenstemmelse i gjentatte målinger på samme prøvemateriale, forutsatt at de utføres med samme betingelser. 
+
+Dette er en viktig aspekt for å få sikre metodikken i en analyse. For å måle graden av reproduserbarhet kan en benytte to eller flere kontrollmaterialer (Som for eksempel resultat av en prøve) som dekker måleområdet, og analysere det for eksempel 10 ganger, og se hvordan resultatet endrer seg. 
+
+På denne måten kan man validere den gjennomførte analysen. Verdien av hva forskjellen mellom to testresultater oppnådd under reproduserbarhetsbetingelser kan forventes å oppstå i utgangpunk i forskjellige konfidensintervall (sannsynlighet) som et intervallestimat. For eksempel på omtrent 99%, 95% eller 90%. Hvis vi bruker 95% konfidensintervall, vil det si at det er 95 prosent av tilfellene det man utfører eksperimentet, vil populasjonens gjennomsnitt ligge innenfor dette intervallet(Bergsaker, 2019).
+
+## **Eksempler på "Code cunk,Text chunk og Sessioninfo innenfor R og R Notebook**
+
+### Text Chunk
+
+```{r}
+# Her kan man putte tekst i en såkalt "kode-chunk", gjerne for å forklare kodeplotten nedenfor som for eksempel.For å sette inn en code cunk kan man bruke snarveien ctrl+alt+i på windows og cmd+alt+i på OSX. 
+```
+
+### Code Chunk
+
+```{r cars}
+summary(iris)
+# Oppsumering av en plot som for eksempel
+```
+
+### Man kan også legge inn plot og visualisering som for eksempel
+
+```{r iris, echo=FALSE}
+plot(iris)
+```
+
+### **Sessioninfo forklart og demonstrert**
+
+Sessioninfo, samler og viser informasjon om den nåværende økten som kjører i R. Informasjonen inneholder for eksempel, R versjonen som kjører, operativsystemet som er brukt og de ulike packages som er lastet. Dette er brukbart for å undersøke mulige feil og avvik, og bidrar til å gjøre prosjektet mer reproduserbart ved å gi oss mer informasjon slik at det for eksempel i fremtiden skal bli lett å reprodusere dette datasettet uavhengig av hva du kjører. Sessioninfo vil derfor hjelpe med å gjøre dette lettere ved å gi oss mer informasjon om økten. Nedenfor er dette demonstrert
+
+```{r}
+sessionInfo()
+```
+
+## **Ulike overskrifter og visuelle skrivemåter**
+
+Forskjellige stiler på skrift, demonstrert nedenfor. 
+
+*italic*, **bold** og ***italic & bold***
+
+*HVL Oppgave*, **HVL Oppgave**, ***HVL Oppgave***
+
+Man kan justere størrelse på heading slik, ved å bruke hashtag og antall i level, demonstrert nedenfor.
+
+### Heihei lvl 3
+
+#### Heihei lvl 4
+
+##### Heihei lvl 5
+
+###### Heihei lvl 6
+
+
+## **Har forskerne incentiver til å være "Reproduserbare" eller må de tvinges?** 
+
+Et av vilkårene for pålitelig vitenskapelig arbeid, er reproduserbarhet. Dette betyr at hvis en annen forsker gjentar undersøkelsen og målingen ved like betingelser og underliggende faktorer Er det betryggende å få tilsvarende (like) resultater. En høy reproduserbarhet uttrykkes som reliabilitet (Bartlett & Frost, 2008). Det er også viktig å være oppmerksom på at noen av målingene gir lik resultat, uavhengig av hvor, når og hvilken forsker som gjennomfører det. For eksempel, kjemiske analyser i et laboratorium må ha i utgangspunkt høy reproduserbarhet, og at målinger av studien kan etterprøves. Et annet eksempel er markedsundersøkelser som utforsker meninger om produkter, tjenester og kjøpemønstre. 
+
+Målinger i sammfunnsvitenskapelig perspektiv innebærer mange kontekstuelle betingelser, som gjør at resultatet ikke er reproduserbar. For eksempel måling av hvordan folk reagerer på nyheter i konkrete politiske atmosfære, eller hvordan velgerne reagerer på kandidater i politiske kampanjer og hvilke saker som er viktige for dem ved valg. Dette er noe som ikke er veldig reproduserbart, Forskjere som jobber med store datasett er nærmest nesten avhengig av å kunne reprodusere det de jobber med, dette er for å finne ulike avvik og feil i modellen som blir brukt. Økonomiske modeller som er forsket på må for eksempel kunne bli reprodusert, likt alle andre kvantitative felt innen forsking. Derfor er det Forskere har dermed incentiver til å ivareta datasett og kunne reprodusere modeller i framtiden. 
+
+## **Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff?** 
+
+Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett, materiale og utvikling av dataprogrammer og pakker innenfor ulike programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet. Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske journaler viktigere framover.
+
 
 
 
