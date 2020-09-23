@@ -32,21 +32,36 @@ R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare an
 Det kan være ulike grunner til at studier ikke er reproduserbare og/eller replikerbare. En årsak kan være feilaktig forkastning av null hypotesen. Dette kan være resultat av feil i analysen eller ett dårlig utvalg. Det kan også være ett resultat av feilaktig innplotting som har gått uanmerket. Når analysen blir gjort på ny igjen vil resultatet bli annerledes. Innen psykologifaget ble det gjort en undersøkelse hvor de prøvde å replikere 100 undersøkelser fra de siste 3 årene som var blitt publisert i de tre mest respekterte journalene innenfor faget. De fant ut att effektene fra funnene i disse studiene ble halvert etter at de ble gjennomført på ny (replikert).De fant også at i <span style="color:red"> 95% </span> av de orginale undersøkelsen hadde de fått ett signifikans nivå på 0,05 eller under, mens etter at undersøkelsen ble utført på ny var det kun <span style="color:red"> 36% </span> som hadde ett signifikant resultat.
 
 ### **Whale of London**
-Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte feilen i den syntetiske modellen som investoren brukte for å kalkulere risikoen i handelen. 
+Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte nedsiden i den syntetiske modellen som investoren brukte for å kalkulere risikoen i handelen. 
 
 Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen. Derfor er sterkt analytisk,statistikk rettede programvarer og programmeringspråk som for eksempel "R" ofte overlegen ovenfor excel og analyse via mainstream programmvare som office suiten til Microsoft. Mange store selskap har i det siste brukt ressurser på å betale tredjeparter som jobber med datascience, for å lage modeller til forretningen sin. 
 
 ## *Historisk data arkivering*
 
+Historisk har data arkivering foregått på ark og store lagringslokaler, arkivering på maskin begynte først da datamskiner ble kommersialisert og gjort tilgjengelig for forskere. Men har nok begynt før det med IBM sine mainframe maskiner hvor data ble lagret som var kritisk til å oppretteholde sikkerheten til USA. 
 
-## *Løser R notebooks problemet med reproduserbarhet?*
+Dataarkivering har i det siste blitt effektivisert, hvor data har blitt lagret på disker og kasetter som ikke eksisterte for noen tiår siden. 
 
-## *Code chunks og text chunks*
+Da mekaniske deler ikke har evig levetid har dette blitt et problem, det jobbes nå for å ta kopi og backup av all historisk data som vi har samlet opp. Et eksempel er svalbard bunkeren hvor det er laget en underjordisk bunker hvor kildekoden til noen av de mest kritiske programmene vi har blir lagret, denne type data har blitt lagret på tape for å forminske bit-loss. De som jobber med data arkivering har sagt at det i gjennomsnitt tar 20 år før vi mister data fra standard magnetdrevne disker og opp imot 60 år på cd-disker for eksempel, kommer ann på hvordan de er lagret, arkivering på magnet-disker har sine egne problemer da de er spesielt utsatt for sjokk og da ekstra utsatt for elektromagnetisk sjokk, fra torden. 
 
-## *Reproduserbarhet i ulike sektorer*
+I det siste har prisene på SSDer gått ned, dette gir en unik mulighet for å lagre data på en effektiv og plassbesparende måte hvor en kan lagre store mengder på fysisk mindre disker. Dette gir oss en muligheten til å ta backup av all data og spare både energi og tid. 
+
+## **Løser R notebooks problemet med reproduserbarhet?**
+
+Da det er flere ulike programmer,versjoner,pakker og software som blir brukt til å lagre data og dermed gjøre studier reproduserbare, vil ikke R-Notebooks på egenhånd løse problemet med reproduserbarhet, det er derimot et viktig steg og gjør problemet mindre.
+
+## *Code chunks og text chunks* done
+
+## **Reproduserbarhet i ulike sektorer**
+
+Ulike sektorer er spesielt avhengig av reproduserbarhet, sektor innen kvantitative og medesin-fagfelt vil være spesielt avhengig av dette, da avvik og feil i datasettet i form av for eksempel økonomiske modeller vil koste dem dyrt, de vil være avhengig av en risikomodell som inkluderer reproduserbarhet. Derfor er de ulike sektorene ulikt avhengig av reproduserbarhet. Kvalitative felt vil være mindre avhengig av dette. Da teori ikke alltid er reproduserbar.
 
 
 ## *Konklusjon*
+
+Reproduserbarhet er nødvendig for å gjennomføre god forsking, vår konklusjon er at det framover vil blir lettere og viktigere å få til reproduserbarhet, tilgang på riktig verktøy har blitt lettere i form av gratis og åpen-kildekode programmvare. Det er også et økende antall læremateriale lett tilgjengelig på nettet. 
+
+Problemet er i form av kompleksitet hvor det er flere versjoner og valg en kan ta for å få lagret reproduserbar data. Forskere må i framtiden gjøre data reproduserbar for å få til reproduserbarhet. Enten i form av peer-review via git eller noe lignende. 
 
 # ***Litteraturliste***
 
@@ -114,6 +129,11 @@ Man kan justere størrelse på heading slik, ved å bruke hashtag og antall i le
 ##### Heihei lvl 5
 
 ###### Heihei lvl 6
+
+Man kan også lage lister,kuleliste, ordnede og uordnene, demonstrert nedenfor. 
+
+*  Blå Bil 
+*  Rød Sykkel 
 
 
 ## **Har forskerne incentiver til å være "Reproduserbare" eller må de tvinges?** 
