@@ -125,8 +125,3 @@ Målinger i sammfunnsvitenskapelig perspektiv innebærer mange kontekstuelle bet
 ## **Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff?** 
 
 Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett, materiale og utvikling av dataprogrammer og pakker innenfor ulike programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet. Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske journaler viktigere framover.
-
-
-
-
-
