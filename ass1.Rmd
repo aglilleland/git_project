@@ -147,8 +147,20 @@ Reproduserbarhet er nødvendig for å gjennomføre god forsking, vår konklusjon
 
 Problemet er i form av kompleksitet hvor det er flere versjoner og valg en kan ta for å få lagret reproduserbar data. Forskere må i framtiden gjøre data reproduserbar for å få til reproduserbarhet. Enten i form av peer-review via git eller noe lignende.
 
-## Referanser
 
-<DIV id="refs<>/DIV>
+!<a href="https://ibb.co/S39ym11"><img src="https://i.ibb.co/4V5tSDD/Skjermbilde-2020-09-23-kl-14-48-17.png" alt="Skjermbilde-2020-09-23-kl-14-48-17" border="0"></a>)
+Vi har brukt tre branches og 31 commits (så langt) for å skrive denne oppgaven. 
+
+@allaireRmarkdownDynamicDocuments2020
+@AccessPreservationScientific2015
+
+
+# References
+
+<DIV id="refs<Mitt_bibliotek.bib>/DIV>
+
+
+
 
 ## Appendiks
+
