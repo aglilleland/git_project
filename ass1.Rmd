@@ -3,7 +3,7 @@ title: "Reproduserbarhet i sammenheng med Stordata"
 bibliiography: Mitt_bibliotek.bib
 csl: apa-no-ampersand.csl
 lang: nb-no
-author: "Anne Grethe Lilleland, Arian Steen"
+author: "Anne Grete Lilleland, Arian Steen"
 date: "17/09/20"
 output:
   html_document:
@@ -153,11 +153,13 @@ Vi har brukt tre branches og 31 commits (så langt) for å skrive denne oppgaven
 
 @allaireRmarkdownDynamicDocuments2020
 @AccessPreservationScientific2015
+@barnesPublishYourComputer2010
 
 
 # References
 
-<DIV id="refs<Mitt_bibliotek.bib>/DIV>
+<DIV id="refs></DIV>
+
 
 
 
