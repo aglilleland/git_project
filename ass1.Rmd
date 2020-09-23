@@ -128,13 +128,13 @@ Forskjellige stiler på skrift, demonstrert nedenfor.
 
 Man kan justere størrelse på heading slik, ved å bruke hashtag og antall i level, demonstrert nedenfor.
 
-### Heihei lvl 3
+### HeiheiHallo lvl 3
 
-#### Heihei lvl 4
+#### HeiheiHallo lvl 4
 
-##### Heihei lvl 5
+##### HeiheiHallo lvl 5
 
-###### Heihei lvl 6
+###### HeiheiHallo lvl 6
 
 Man kan også lage lister,kuleliste, ordnede og uordnene, demonstrert nedenfor.
 
