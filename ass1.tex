@@ -1,0 +1,549 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  norsk,
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Reproduserbarhet i sammenheng med Stordata},
+  pdfauthor={Anne Grethe Lilleland, Arian Steen},
+  pdflang={nb-no},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifxetex
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{norsk}
+\else
+  \usepackage[shorthands=off,main=norsk]{babel}
+\fi
+
+\title{Reproduserbarhet i sammenheng med Stordata}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Data Science Assignment HVL University}
+\author{Anne Grethe Lilleland, Arian Steen}
+\date{17/09/20}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduksjon}{%
+\subsection{\texorpdfstring{
+\emph{Introduksjon}}{ Introduksjon}}\label{introduksjon}}
+
+I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man
+arbeider med stordata.Vi vil se på hva \emph{R} og \emph{R-studio} er,
+og hvordan dette kan hjelpe oss med reproduserbarhet og replikerbarhet.
+Vi vil også forklare hva \emph{R-markdown} og \emph{R-Notebook} er.
+
+Utviklingen av diverse dataprogrammer (software) har styrket
+analytikernes evne til å gjennomføre flerdimensjonal data-analyse. En
+slik type analyse, gir muligheter til å gjennomføre komplekse
+beregninger med svært raske resultater. Blant de ulike dataprogrammer
+som brukes til dette finner man, for eksempel. SPSS,STATA,EXCEL og R.
+
+Sistnevnte ``R'' tilbyr unike muligheter som skiller det fra andre
+tilgjengelige statistiske verktøyene. Faktisk har R blitt hovedverktøyet
+til data-analyse. De R ekspertene som bruker R-programmet, kalles
+Data-Analyst eller Data Scietist, på grunn av det brede omfanget som
+``R'' kan tilby.
+
+I 1991 ble ``R'' opprettet av Ross Ihaka og Robert Gentleman i
+``Department of Statistics ved University of Auckland''. I 1993 ble den
+første kunngjøringen av ``R'' gjort for publikum. Ross og Roberts
+erfaring med å utvikle ``R'' er dokumentert i en artikkel i det
+vitenskapelige journal (Ihaka,R \& Gentleman,R 1996)
+
+Populæriteten til ``R'' kommer fra diverse kilder. For det første er den
+basert på multiplatform kode, som vil gjøre det mulig å bruke den på
+tvers av ulike platformer (Dette fører til enklere sammarbeid mellom
+flere parter) og åpen kildekode (Det sikrer reproduserbarheten av
+analysen), det blir brukt av profesjonelle i arbeidslivet, store
+selskaper og studenter som foreksempel (Økonomisk Data-analyse) brukt av
+HVL studenter innen økonomifeltet. ``R'' gir oss muligheten til å jobbe
+raskt og iretaivt med store datamengder.
+
+For det andre, er brukervennligheten til ``R'' og det faktum at det
+finnes store mengder læremateriale åpent,fritt og lett tilgjengelig på
+nettet, gjør det mulig å reprodusere data, gjennomføre analyser og løse
+diverse problemstillinger. ``R'' gjør det mulig for forskere å fange opp
+og kommunisere detaljene i arbeidsflyten med større effektivitet. I
+følgende paragrafer forteller vi nærmere om hvordan disse ulike
+elementene øker vår mulighet til å gjennomføre en analyse ut ifra et
+datasett ved bruk av ``R''.
+
+\hypertarget{hvorfor-r-og-r-studio}{%
+\subsubsection{\texorpdfstring{\textbf{Hvorfor R og R
+studio?}}{Hvorfor R og R studio?}}\label{hvorfor-r-og-r-studio}}
+
+Både R og R studio er åpen kildekode programvarer og er gratis. Det
+brukes i sammenheng med forskning og datavisualisering. R er ett
+kodespråk for statistisk databehandling og grafikk, mens R-studio er ett
+integrert utviklingsmiljø for R. R og R studio gjør sammarbeid enklere
+via feks. Git og Github. Man kan importere og manipulere data og kjøre
+dette i ett maskinlæringsprogram via R studio. Skal man kjøre linerar
+regrisjon eller lignende kan man bruke R og R studio. Analyser gjort i R
+og R studio er reproduserbare, da alt som er gjort ligger inne i
+``history'' og kan bli hentet frem igjen.
+
+\hypertarget{historisk-data-arkivering}{%
+\subsection{\texorpdfstring{\textbf{Historisk data
+arkivering}}{Historisk data arkivering}}\label{historisk-data-arkivering}}
+
+Historisk har data arkivering foregått på ark og store lagringslokaler,
+arkivering på maskin begynte først da datamskiner ble kommersialisert og
+gjort tilgjengelig for forskere. Men har nok begynt før det med IBM sine
+mainframe maskiner hvor data ble lagret som var kritisk til å
+oppretteholde sikkerheten til USA.
+
+Dataarkivering har i det siste blitt effektivisert, hvor data har blitt
+lagret på disker og kasetter som ikke eksisterte for noen tiår siden.
+
+Da mekaniske deler ikke har evig levetid har dette blitt et problem, det
+jobbes nå for å ta kopi og backup av all historisk data som vi har
+samlet opp. Et eksempel er svalbard bunkeren hvor det er laget en
+underjordisk bunker hvor kildekoden til noen av de mest kritiske
+programmene vi har blir lagret, denne type data har blitt lagret på tape
+for å forminske bit-loss.
+
+De som jobber med data arkivering har sagt at det i gjennomsnitt tar 20
+år før vi mister data fra standard magnetdrevne disker og opp imot 60 år
+på cd-disker for eksempel, kommer ann på hvordan de er lagret,
+arkivering på magnet-disker har sine egne problemer da de er spesielt
+utsatt for sjokk og da ekstra utsatt for elektromagnetisk sjokk, fra
+storm og uvær.
+
+I det siste har prisene på SSDer gått ned, dette gir en unik mulighet
+for å lagre data på en effektiv og plassbesparende måte hvor en kan
+lagre store mengder på fysisk mindre disker. Dette gir oss en muligheten
+til å ta backup av all data og spare både energi og tid.
+
+\hypertarget{reproduserbarhet-og-replikerbarhet}{%
+\subsection{\texorpdfstring{\emph{Reproduserbarhet og
+replikerbarhet}}{Reproduserbarhet og replikerbarhet}}\label{reproduserbarhet-og-replikerbarhet}}
+
+\hypertarget{hvorfor-bryr-vi-oss-om-reproduserbarhet-og-replikerbarhet}{%
+\subsubsection{\texorpdfstring{\textbf{Hvorfor bryr vi oss om
+reproduserbarhet og
+replikerbarhet?}}{Hvorfor bryr vi oss om reproduserbarhet og replikerbarhet?}}\label{hvorfor-bryr-vi-oss-om-reproduserbarhet-og-replikerbarhet}}
+
+Forskere prøver ofte å reprodusere eksprimenter for å øke troverdigheten
+til forsøket og resultatene i eksprimentet. Hvis eksprimentet kan
+reproduseres og få de samme svarene øker tiltroen/tillten til
+resultatet.Reproduserbarhet går ut på å bruke de samme dataene som
+allerede er brukt i forsåket, utføre da samme analysene, og ende opp med
+de samme svarene.
+
+Replikerbarhet blir sett på som ``gull'' standarden innenfor forskning.
+Replikerbarhet går ut på at det skal være mulig å gjøre forsøket på
+nytt, med nye data, og ende opp med samme svar. Reproduserbarhet er
+nødvendig for å få replikerbarhet, men ikke tilstrekkelig nok til å gi
+replikerbarhet.
+
+Reproduserbarhet og replikerbarhet har vist seg og ikke være noen
+selvfølge innen forskning. Det er flere meninger og tanker rundt dette.
+Noen hevder forskningen burde være reproduserbar for at den skal kunne
+publiseres. Andre går så lang og mener den også bør kunne replikeres.Vi
+vil ikke gå nærmere inn på dette, men vi vil se mer på grunnene til at
+studier ikke er reproduserbare og replikerbare, og ulike løsninger på
+dette senere i oppgaven.
+
+\hypertarget{reproduserbarhet-og-r-notebooks}{%
+\subsection{\texorpdfstring{\textbf{Reproduserbarhet og
+R-Notebooks}}{Reproduserbarhet og R-Notebooks}}\label{reproduserbarhet-og-r-notebooks}}
+
+Repetering og intern reproduserbarhet et aspekt innen Data Science
+feltet, og alle som håndterer og jobber/deler store mengder data. Det
+handler om overensstemmelse mellom resultatene av målinger av samme
+målstørrelse utført under samme målebetingelser (VIM, 1993).
+Reproduserbarhet avspeiler i hvilken grad en har overenstemmelse i
+gjentatte målinger på samme prøvemateriale, forutsatt at de utføres med
+samme betingelser.
+
+Dette er en viktig aspekt for å få sikre metodikken i en analyse. For å
+måle graden av reproduserbarhet kan en benytte to eller flere
+kontrollmaterialer (Som for eksempel resultat av en prøve) som dekker
+måleområdet, og analysere det for eksempel 10 ganger, og se hvordan
+resultatet endrer seg.
+
+På denne måten kan man validere den gjennomførte analysen. Verdien av
+hva forskjellen mellom to testresultater oppnådd under
+reproduserbarhetsbetingelser kan forventes å oppstå i utgangpunk i
+forskjellige konfidensintervall (sannsynlighet) som et intervallestimat.
+For eksempel på omtrent 99\%, 95\% eller 90\%. Hvis vi bruker 95\%
+konfidensintervall, vil det si at det er 95 prosent av tilfellene det
+man utfører eksperimentet, vil populasjonens gjennomsnitt ligge innenfor
+dette intervallet(Bergsaker, 2019).
+
+\hypertarget{har-forskerne-incentiver-til-uxe5-vuxe6re-reproduserbare-eller-muxe5-de-tvinges}{%
+\subsection{\texorpdfstring{\textbf{Har forskerne incentiver til å være
+``Reproduserbare'' eller må de
+tvinges?}}{Har forskerne incentiver til å være ``Reproduserbare'' eller må de tvinges?}}\label{har-forskerne-incentiver-til-uxe5-vuxe6re-reproduserbare-eller-muxe5-de-tvinges}}
+
+Et av vilkårene for pålitelig vitenskapelig arbeid, er reproduserbarhet.
+Dette betyr at hvis en annen forsker gjentar undersøkelsen og målingen
+ved like betingelser og underliggende faktorer Er det betryggende å få
+tilsvarende (like) resultater. En høy reproduserbarhet uttrykkes som
+reliabilitet (Bartlett \& Frost, 2008). Det er også viktig å være
+oppmerksom på at noen av målingene gir lik resultat, uavhengig av hvor,
+når og hvilken forsker som gjennomfører det. For eksempel, kjemiske
+analyser i et laboratorium må ha i utgangspunkt høy reproduserbarhet, og
+at målinger av studien kan etterprøves. Et annet eksempel er
+markedsundersøkelser som utforsker meninger om produkter, tjenester og
+kjøpemønstre.
+
+Målinger i sammfunnsvitenskapelig perspektiv innebærer mange
+kontekstuelle betingelser, som gjør at resultatet ikke er reproduserbar.
+For eksempel måling av hvordan folk reagerer på nyheter i konkrete
+politiske atmosfære, eller hvordan velgerne reagerer på kandidater i
+politiske kampanjer og hvilke saker som er viktige for dem ved valg.
+Dette er noe som ikke er veldig reproduserbart, Forskjere som jobber med
+store datasett er nærmest nesten avhengig av å kunne reprodusere det de
+jobber med, dette er for å finne ulike avvik og feil i modellen som blir
+brukt. Økonomiske modeller som er forsket på må for eksempel kunne bli
+reprodusert, likt alle andre kvantitative felt innen forsking. Derfor er
+det Forskere har dermed incentiver til å ivareta datasett og kunne
+reprodusere modeller i framtiden.
+
+\hypertarget{er-uxf8kt-reproduserbarhet-noe-som-vil-tvinge-seg-fram-eller-er-dagens-uxf8kte-interesse-bare-en-blaff}{%
+\subsection{\texorpdfstring{\textbf{Er økt reproduserbarhet noe som vil
+tvinge seg fram eller er dagens økte interesse bare en
+blaff?}}{Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff?}}\label{er-uxf8kt-reproduserbarhet-noe-som-vil-tvinge-seg-fram-eller-er-dagens-uxf8kte-interesse-bare-en-blaff}}
+
+Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett,
+materiale og utvikling av dataprogrammer og pakker innenfor ulike
+programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den
+økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio
+som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet.
+Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske
+journaler viktigere framover.
+
+\hypertarget{hvorfor-er-ikke-flere-studier-reproduserbare-og-replikerbare}{%
+\subsection{\texorpdfstring{\textbf{Hvorfor er ikke flere studier
+reproduserbare og
+replikerbare?}}{Hvorfor er ikke flere studier reproduserbare og replikerbare?}}\label{hvorfor-er-ikke-flere-studier-reproduserbare-og-replikerbare}}
+
+Det kan være ulike grunner til at studier ikke er reproduserbare
+og/eller replikerbare. En årsak kan være feilaktig forkastning av null
+hypotesen. Dette kan være resultat av feil i analysen eller ett dårlig
+utvalg. Det kan også være ett resultat av feilaktig innplotting som har
+gått uanmerket. Når analysen blir gjort på ny igjen vil resultatet bli
+annerledes. Innen psykologifaget ble det gjort en undersøkelse hvor de
+prøvde å replikere 100 undersøkelser fra de siste 3 årene som var blitt
+publisert i de tre mest respekterte journalene innenfor faget. De fant
+ut att effektene fra funnene i disse studiene ble halvert etter at de
+ble gjennomført på ny (replikert).De fant også at i { 95\% } av de
+orginale undersøkelsen hadde de fått ett signifikans nivå på 0,05 eller
+under, mens etter at undersøkelsen ble utført på ny var det kun { 36\% }
+som hadde ett signifikant resultat.
+
+\hypertarget{reproduserbarhet-i-ulike-sektorer}{%
+\subsection{\texorpdfstring{\textbf{Reproduserbarhet i ulike
+sektorer}}{Reproduserbarhet i ulike sektorer}}\label{reproduserbarhet-i-ulike-sektorer}}
+
+Ulike sektorer er spesielt avhengig av reproduserbarhet, sektor innen
+kvantitative og medesin-fagfelt vil være spesielt avhengig av dette, da
+avvik og feil i datasettet i form av for eksempel økonomiske modeller
+vil koste dem dyrt, de vil være avhengig av en risikomodell som
+inkluderer reproduserbarhet. Derfor er de ulike sektorene ulikt avhengig
+av reproduserbarhet. Kvalitative felt vil være mindre avhengig av dette.
+Da teori ikke alltid er reproduserbar.
+
+\hypertarget{whale-of-london-eksempel}{%
+\subsection{\texorpdfstring{\textbf{Whale of London
+eksempel}}{Whale of London eksempel}}\label{whale-of-london-eksempel}}
+
+Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder
+dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil
+i excel spreadsheet, som underestimerte nedsiden i den syntetiske
+modellen som investoren brukte for å kalkulere risikoen i handelen.
+
+Videre undersøkelser viste hvordan tabben en enkel tabbe i excel
+spreadsheet remodelerte den finansielle risikomodellen som ble brukt i
+sammenheng med investeringen. Derfor er sterkt analytisk,statistikk
+rettede programvarer og programmeringspråk som for eksempel ``R'' ofte
+overlegen ovenfor excel og analyse via mainstream programmvare som
+office suiten til Microsoft. Mange store selskap har i det siste brukt
+ressurser på å betale tredjeparter som jobber med datascience, for å
+lage modeller til forretningen sin.
+
+\hypertarget{r-markdown-og-r-notebooks}{%
+\subsection{\texorpdfstring{\textbf{R-markdown og
+R-notebooks}}{R-markdown og R-notebooks}}\label{r-markdown-og-r-notebooks}}
+
+R-Markdown gjør det mulig å skape rike, fullt dokumenterete,
+reproduserbare analyser (kilde). R koder, kommentarer, metadata ligger
+da inni det samme dokumentet. Dette gjør at man i etterkant kan se
+hvilke data som har blitt brukt. Hvilke formler som er brukt for å få
+svarene i analysen. Alt som har blitt gjort i analysen kan bli funnet
+igjen. Det er ikke gjort analyser separert hvor svarene har blitt
+plottet inn i dokumentet i etterkant.Dette dokumentet er skrevet med R
+notebook, som er et r-markdown dokument med kode ``chunks'' som kan
+utføres uavhengig og interaktivt, hvor resultatet er synlig med en gang.
+Dokumentet blir en blanding av vanlig skrift og koder, noe som gjør det
+svært effektivt iforhold til andre skriveprogrammer. Kodene som brukes
+er ikke synlige i det endelige resultatet som blir publisert, kun
+resultatene av disse kodene. Ønsker man derrimot å se hvilke koder som
+er blitt brukt er det mulig i etterkant. Dette gjør at dokumentet blir
+reproduserbart.
+
+\hypertarget{luxf8ser-r-notebooks-problemet-med-reproduserbarhet}{%
+\subsection{\texorpdfstring{\textbf{Løser R notebooks problemet med
+reproduserbarhet?}}{Løser R notebooks problemet med reproduserbarhet?}}\label{luxf8ser-r-notebooks-problemet-med-reproduserbarhet}}
+
+Da det er flere ulike programmer,versjoner,pakker og software som blir
+brukt til å lagre data og dermed gjøre studier reproduserbare, vil ikke
+R-Notebooks på egenhånd løse problemet med reproduserbarhet, det er
+derimot et viktig steg og gjør problemet mindre.
+
+\hypertarget{eksempler-puxe5-code-cunktext-chunk-og-sessioninfo-innenfor-r-og-r-notebook}{%
+\subsection{\texorpdfstring{\textbf{Eksempler på "Code cunk,Text chunk
+og Sessioninfo innenfor R og R
+Notebook}}{Eksempler på "Code cunk,Text chunk og Sessioninfo innenfor R og R Notebook}}\label{eksempler-puxe5-code-cunktext-chunk-og-sessioninfo-innenfor-r-og-r-notebook}}
+
+Demonstrasjoner og eksempler på hva ulike verktøy innen R, det finnes
+ulike løsninger for alle mulige felt innen forskning og privat bruk.
+
+\hypertarget{text-chunk}{%
+\subsubsection{Text Chunk}\label{text-chunk}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Her kan man putte tekst i en såkalt "kode-chunk", gjerne for å forklare kodeplotten nedenfor som for eksempel.For å sette inn en code cunk kan man bruke snarveien ctrl+alt+i på windows og cmd+alt+i på OSX.}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{code-chunk}{%
+\subsubsection{Code Chunk}\label{code-chunk}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(iris)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50  
+##                 
+##                 
+## 
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Oppsumering av en plot som for eksempel}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{man-kan-ogsuxe5-legge-inn-plot-og-visualisering-som-for-eksempel}{%
+\subsubsection{Man kan også legge inn plot og visualisering som for
+eksempel}\label{man-kan-ogsuxe5-legge-inn-plot-og-visualisering-som-for-eksempel}}
+
+\includegraphics{ass1_files/figure-latex/iris-1.pdf}
+
+\hypertarget{sessioninfo-forklart-og-demonstrert}{%
+\subsubsection{\texorpdfstring{\textbf{Sessioninfo forklart og
+demonstrert}}{Sessioninfo forklart og demonstrert}}\label{sessioninfo-forklart-og-demonstrert}}
+
+Sessioninfo, samler og viser informasjon om den nåværende økten som
+kjører i R. Informasjonen inneholder for eksempel, R versjonen som
+kjører, operativsystemet som er brukt og de ulike packages som er
+lastet. Dette er brukbart for å undersøke mulige feil og avvik, og
+bidrar til å gjøre prosjektet mer reproduserbart ved å gi oss mer
+informasjon slik at det for eksempel i fremtiden skal bli lett å
+reprodusere dette datasettet uavhengig av hva du kjører. Sessioninfo vil
+derfor hjelpe med å gjøre dette lettere ved å gi oss mer informasjon om
+økten. Nedenfor er dette demonstrert
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.0.2 (2020-06-22)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Sierra 10.12.6
+## 
+## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## loaded via a namespace (and not attached):
+##  [1] compiler_4.0.2  magrittr_1.5    tools_4.0.2     htmltools_0.5.0
+##  [5] yaml_2.2.1      stringi_1.4.6   rmarkdown_2.3   knitr_1.29     
+##  [9] stringr_1.4.0   xfun_0.16       digest_0.6.25   rlang_0.4.7    
+## [13] evaluate_0.14
+\end{verbatim}
+
+\hypertarget{ulike-overskrifter-og-visuelle-skrivemuxe5ter}{%
+\subsection{\texorpdfstring{\textbf{Ulike overskrifter og visuelle
+skrivemåter}}{Ulike overskrifter og visuelle skrivemåter}}\label{ulike-overskrifter-og-visuelle-skrivemuxe5ter}}
+
+Forskjellige stiler på skrift, demonstrert nedenfor.
+
+\emph{italic}, \textbf{bold} og \textbf{\emph{italic \& bold}}
+
+\emph{HVL Oppgave}, \textbf{HVL Oppgave}, \textbf{\emph{HVL Oppgave}}
+
+Man kan justere størrelse på heading slik, ved å bruke hashtag og antall
+i level, demonstrert nedenfor.
+
+\hypertarget{heihei-lvl-3}{%
+\subsubsection{Heihei lvl 3}\label{heihei-lvl-3}}
+
+\hypertarget{heihei-lvl-4}{%
+\paragraph{Heihei lvl 4}\label{heihei-lvl-4}}
+
+\hypertarget{heihei-lvl-5}{%
+\subparagraph{Heihei lvl 5}\label{heihei-lvl-5}}
+
+Heihei lvl 6
+
+Man kan også lage lister,kuleliste, ordnede og uordnene, demonstrert
+nedenfor.
+
+\begin{itemize}
+\tightlist
+\item
+  Blå Bil
+\item
+  Rød Sykkel
+\end{itemize}
+
+\hypertarget{konklusjon}{%
+\subsection{\texorpdfstring{\textbf{Konklusjon}}{Konklusjon}}\label{konklusjon}}
+
+Reproduserbarhet er nødvendig for å gjennomføre god forsking, vår
+konklusjon er at det framover vil blir lettere og viktigere å få til
+reproduserbarhet, tilgang på riktig verktøy har blitt lettere i form av
+gratis og åpen-kildekode programmvare. Det er også et økende antall
+læremateriale lett tilgjengelig på nettet.
+
+Problemet er i form av kompleksitet hvor det er flere versjoner og valg
+en kan ta for å få lagret reproduserbar data. Forskere må i framtiden
+gjøre data reproduserbar for å få til reproduserbarhet. Enten i form av
+peer-review via git eller noe lignende.
+
+\hypertarget{referanser}{%
+\subsection{Referanser}\label{referanser}}
+
+\textless DIV id="refs\textless\textgreater/DIV\textgreater{}
+
+\hypertarget{appendiks}{%
+\subsection{Appendiks}\label{appendiks}}
+
+\end{document}
