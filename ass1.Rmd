@@ -1,6 +1,6 @@
 ---
 title: "Reproduserbarhet i sammenheng med Stordata"
-bibliiography: Mitt_bibliotek.bib
+bibliography: "Mitt-bibliotek.bib"
 csl: apa-no-ampersand.csl
 lang: nb-no
 author: "Anne Grethe Lilleland, Arian Steen"
@@ -12,7 +12,7 @@ output:
 subtitle: Data Science Assignment HVL University
 ---
 
-## <span style="color:pink"> *Introduksjon*
+## Introduksjon
 
 I denne oppgaven tar vi for oss viktigheten av reproduserbarhet når man arbeider med stordata.Vi vil se på hva *R* og *R-studio* er, og hvordan dette kan hjelpe oss med reproduserbarhet og replikerbarhet. Vi vil også forklare hva *R-markdown* og *R-Notebook* er.
 
@@ -26,10 +26,10 @@ Populæriteten til "R" kommer fra diverse kilder. For det første er den basert 
 
 For det andre, er brukervennligheten til "R" og det faktum at det finnes store mengder læremateriale åpent,fritt og lett tilgjengelig på nettet, gjør det mulig å reprodusere data, gjennomføre analyser og løse diverse problemstillinger. "R" gjør det mulig for forskere å fange opp og kommunisere detaljene i arbeidsflyten med større effektivitet. I følgende paragrafer forteller vi nærmere om hvordan disse ulike elementene øker vår mulighet til å gjennomføre en analyse ut ifra et datasett ved bruk av "R".
 
-### **Hvorfor R og R studio?**
+### Hvorfor R og R studio?
 Både R og R studio er åpen kildekode programvarer og er gratis. Det brukes i sammenheng med forskning og datavisualisering. R er ett kodespråk for statistisk databehandling og grafikk, mens R-studio er ett integrert utviklingsmiljø for R. R og R studio gjør sammarbeid enklere via feks. Git og Github. Man kan importere og manipulere data og kjøre dette i ett maskinlæringsprogram via R studio. Skal man kjøre linerar regrisjon eller lignende kan man bruke R og R studio. Analyser gjort i R og R studio er reproduserbare, da alt som er gjort ligger inne i "history" og kan bli hentet frem igjen.
 
-## **Historisk data arkivering**
+## Historisk data arkivering
 
 Historisk har data arkivering foregått på ark og store lagringslokaler, arkivering på maskin begynte først da datamskiner ble kommersialisert og gjort tilgjengelig for forskere. Men har nok begynt før det med IBM sine mainframe maskiner hvor data ble lagret som var kritisk til å oppretteholde sikkerheten til USA.
 
@@ -42,56 +42,54 @@ De som jobber med data arkivering har sagt at det i gjennomsnitt tar 20 år før
 I det siste har prisene på SSDer gått ned, dette gir en unik mulighet for å lagre data på en effektiv og plassbesparende måte hvor en kan lagre store mengder på fysisk mindre disker. Dette gir oss en muligheten til å ta backup av all data og spare både energi og tid.
 
 
-## <span style="color:lightblue">*Reproduserbarhet og replikerbarhet*
-### **Hvorfor bryr vi oss om reproduserbarhet og replikerbarhet?**
+## Reproduserbarhet og replikerbarhet
+
+### Hvorfor bryr vi oss om reproduserbarhet og replikerbarhet?
 Forskere prøver ofte å reprodusere eksprimenter for å øke troverdigheten til forsøket og resultatene i eksprimentet. Hvis eksprimentet kan reproduseres og få de samme svarene øker tiltroen/tillten til resultatet.Reproduserbarhet går ut på å bruke de samme dataene som allerede er brukt i forsåket, utføre da samme analysene, og ende opp med de samme svarene.
 
 Replikerbarhet blir sett på som "gull" standarden innenfor forskning. Replikerbarhet går ut på at det skal være mulig å gjøre forsøket på nytt, med nye data, og ende opp med samme svar. Reproduserbarhet er nødvendig for å få replikerbarhet, men ikke tilstrekkelig nok til å gi replikerbarhet.
 
 Reproduserbarhet og replikerbarhet har vist seg og ikke være noen selvfølge innen forskning. Det er flere meninger og tanker rundt dette. Noen hevder forskningen burde være reproduserbar for at den skal kunne publiseres. Andre går så lang og mener den også bør kunne replikeres.Vi vil ikke gå nærmere inn på dette, men vi vil se mer på grunnene til at studier ikke er reproduserbare og replikerbare, og ulike løsninger på dette senere i oppgaven.
 
-## **Reproduserbarhet og R-Notebooks**
-
+## Reproduserbarhet og R-Notebooks
 
 Repetering og intern reproduserbarhet et aspekt innen Data Science feltet, og alle som håndterer og jobber/deler store mengder data. Det handler om overensstemmelse mellom resultatene av målinger av samme målstørrelse utført under samme målebetingelser (VIM, 1993). Reproduserbarhet avspeiler i hvilken grad en har overenstemmelse i gjentatte målinger på samme prøvemateriale, forutsatt at de utføres med samme betingelser.
 
 Dette er en viktig aspekt for å få sikre metodikken i en analyse. For å måle graden av reproduserbarhet kan en benytte to eller flere kontrollmaterialer (Som for eksempel resultat av en prøve) som dekker måleområdet, og analysere det for eksempel 10 ganger, og se hvordan resultatet endrer seg.
 
-
 På denne måten kan man validere den gjennomførte analysen. Verdien av hva forskjellen mellom to testresultater oppnådd under reproduserbarhetsbetingelser kan forventes å oppstå i utgangpunk i forskjellige konfidensintervall (sannsynlighet) som et intervallestimat. For eksempel på omtrent 99%, 95% eller 90%. Hvis vi bruker 95% konfidensintervall, vil det si at det er 95 prosent av tilfellene det man utfører eksperimentet, vil populasjonens gjennomsnitt ligge innenfor dette intervallet(Bergsaker, 2019).
 
-
-## **Har forskerne incentiver til å være "Reproduserbare" eller må de tvinges?**
+## Har forskerne incentiver til å være «Reproduserbare» eller må de tvinges?
 
 Et av vilkårene for pålitelig vitenskapelig arbeid, er reproduserbarhet. Dette betyr at hvis en annen forsker gjentar undersøkelsen og målingen ved like betingelser og underliggende faktorer Er det betryggende å få tilsvarende (like) resultater. En høy reproduserbarhet uttrykkes som reliabilitet (Bartlett & Frost, 2008). Det er også viktig å være oppmerksom på at noen av målingene gir lik resultat, uavhengig av hvor, når og hvilken forsker som gjennomfører det. For eksempel, kjemiske analyser i et laboratorium må ha i utgangspunkt høy reproduserbarhet, og at målinger av studien kan etterprøves. Et annet eksempel er markedsundersøkelser som utforsker meninger om produkter, tjenester og kjøpemønstre.
 
 Målinger i sammfunnsvitenskapelig perspektiv innebærer mange kontekstuelle betingelser, som gjør at resultatet ikke er reproduserbar. For eksempel måling av hvordan folk reagerer på nyheter i konkrete politiske atmosfære, eller hvordan velgerne reagerer på kandidater i politiske kampanjer og hvilke saker som er viktige for dem ved valg. Dette er noe som ikke er veldig reproduserbart, Forskjere som jobber med store datasett er nærmest nesten avhengig av å kunne reprodusere det de jobber med, dette er for å finne ulike avvik og feil i modellen som blir brukt. Økonomiske modeller som er forsket på må for eksempel kunne bli reprodusert, likt alle andre kvantitative felt innen forsking. Derfor er det Forskere har dermed incentiver til å ivareta datasett og kunne reprodusere modeller i framtiden.
 
-## **Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff?**
+## Er økt reproduserbarhet noe som vil tvinge seg fram eller er dagens økte interesse bare en blaff?
 
 Økt kunnskapsnivå i sammfunnet, lett tilgjengelighet av datasett, materiale og utvikling av dataprogrammer og pakker innenfor ulike programm skreddersydd for hvert felt. Disse ulike faktorene gjør at den økte interessen vil øke. For eksempel finnes det pakker innenfor Rstudio som er skreddersydd for psykologer. (Psych) pakken i dette tilfellet. Alle disse faktorene gjør reproduserbarhet innen forsking og akademiske journaler viktigere framover.
 
-## **Hvorfor er ikke flere studier reproduserbare og replikerbare?**
+## Hvorfor er ikke flere studier reproduserbare og replikerbare?
 
 Det kan være ulike grunner til at studier ikke er reproduserbare og/eller replikerbare. En årsak kan være feilaktig forkastning av null hypotesen. Dette kan være resultat av feil i analysen eller ett dårlig utvalg. Det kan også være ett resultat av feilaktig innplotting som har gått uanmerket. Når analysen blir gjort på ny igjen vil resultatet bli annerledes. Innen psykologifaget ble det gjort en undersøkelse hvor de prøvde å replikere 100 undersøkelser fra de siste 3 årene som var blitt publisert i de tre mest respekterte journalene innenfor faget. De fant ut att effektene fra funnene i disse studiene ble halvert etter at de ble gjennomført på ny (replikert).De fant også at i <span style="color:red"> 95% </span> av de orginale undersøkelsen hadde de fått ett signifikans nivå på 0,05 eller under, mens etter at undersøkelsen ble utført på ny var det kun <span style="color:red"> 36% </span> som hadde ett signifikant resultat.
 
-## **Reproduserbarhet i ulike sektorer**
+## Reproduserbarhet i ulike sektorer
 
 Ulike sektorer er spesielt avhengig av reproduserbarhet, sektor innen kvantitative og medesin-fagfelt vil være spesielt avhengig av dette, da avvik og feil i datasettet i form av for eksempel økonomiske modeller vil koste dem dyrt, de vil være avhengig av en risikomodell som inkluderer reproduserbarhet. Derfor er de ulike sektorene ulikt avhengig av reproduserbarhet. Kvalitative felt vil være mindre avhengig av dette. Da teori ikke alltid er reproduserbar.
 
-## **Whale of London eksempel**
+## Whale of London eksempel
 Historien om JP Morgan Chase tabben som kostet selskapet 2 Milliarder dollar, aksjeinvestorer som jobbet for JP Morgan hadde slått inn en feil i excel spreadsheet, som underestimerte nedsiden i den syntetiske modellen som investoren brukte for å kalkulere risikoen i handelen.
 
 Videre undersøkelser viste hvordan tabben en enkel tabbe i excel spreadsheet remodelerte den finansielle risikomodellen som ble brukt i sammenheng med investeringen. Derfor er sterkt analytisk,statistikk rettede programvarer og programmeringspråk som for eksempel "R" ofte overlegen ovenfor excel og analyse via mainstream programmvare som office suiten til Microsoft. Mange store selskap har i det siste brukt ressurser på å betale tredjeparter som jobber med datascience, for å lage modeller til forretningen sin.
 
-## **R-markdown og R-notebooks**
+## R-markdown og R-notebooks
 R-Markdown gjør det mulig å skape rike, fullt dokumenterete, reproduserbare analyser (kilde). R koder, kommentarer, metadata ligger da inni det samme dokumentet. Dette gjør at man i etterkant kan se hvilke data som har blitt brukt. Hvilke formler som er brukt for å få svarene i analysen. Alt som har blitt gjort i analysen kan bli funnet igjen. Det er ikke gjort analyser separert hvor svarene har blitt plottet inn i dokumentet i etterkant.Dette dokumentet er skrevet med R notebook, som er et r-markdown dokument med kode "chunks" som kan utføres uavhengig og interaktivt, hvor resultatet er synlig med en gang. Dokumentet blir en blanding av vanlig skrift og koder, noe som gjør det svært effektivt iforhold til andre skriveprogrammer. Kodene som brukes er ikke synlige i det endelige resultatet som blir publisert, kun resultatene av disse kodene. Ønsker man derrimot å se hvilke koder som er blitt brukt er det mulig i etterkant. Dette gjør at dokumentet blir reproduserbart.
 
-## **Løser R notebooks problemet med reproduserbarhet?**
+## Løser R notebooks problemet med reproduserbarhet?
 
 Da det er flere ulike programmer,versjoner,pakker og software som blir brukt til å lagre data og dermed gjøre studier reproduserbare, vil ikke R-Notebooks på egenhånd løse problemet med reproduserbarhet, det er derimot et viktig steg og gjør problemet mindre.
 
-## **Eksempler på "Code cunk,Text chunk og Sessioninfo innenfor R og R Notebook**
+## Eksempler på "Code cunk,Text chunk og Sessioninfo innenfor R og R Notebook
 
 Demonstrasjoner og eksempler på hva ulike verktøy innen R, det finnes ulike løsninger for alle mulige felt innen forskning og privat bruk. 
 
@@ -114,7 +112,7 @@ summary(iris)
 plot(iris)
 ```
 
-### **Sessioninfo forklart og demonstrert**
+### Sessioninfo forklart og demonstrert
 
 Sessioninfo, samler og viser informasjon om den nåværende økten som kjører i R. Informasjonen inneholder for eksempel, R versjonen som kjører, operativsystemet som er brukt og de ulike packages som er lastet. Dette er brukbart for å undersøke mulige feil og avvik, og bidrar til å gjøre prosjektet mer reproduserbart ved å gi oss mer informasjon slik at det for eksempel i fremtiden skal bli lett å reprodusere dette datasettet uavhengig av hva du kjører. Sessioninfo vil derfor hjelpe med å gjøre dette lettere ved å gi oss mer informasjon om økten. Nedenfor er dette demonstrert
 
@@ -122,7 +120,7 @@ Sessioninfo, samler og viser informasjon om den nåværende økten som kjører i
 sessionInfo()
 ```
 
-## **Ulike overskrifter og visuelle skrivemåter**
+## Ulike overskrifter og visuelle skrivemåter
 
 Forskjellige stiler på skrift, demonstrert nedenfor.
 
@@ -146,28 +144,23 @@ Man kan også lage lister,kuleliste, ordnede og uordnene, demonstrert nedenfor.
 *  Blå Bil
 *  Rød Sykkel
 
-## **Konklusjon**
+## Konklusjon
 
 Reproduserbarhet er nødvendig for å gjennomføre god forsking, vår konklusjon er at det framover vil blir lettere og viktigere å få til reproduserbarhet, tilgang på riktig verktøy har blitt lettere i form av gratis og åpen-kildekode programmvare. Det er også et økende antall læremateriale lett tilgjengelig på nettet.
 
 Problemet er i form av kompleksitet hvor det er flere versjoner og valg en kan ta for å få lagret reproduserbar data. Forskere må i framtiden gjøre data reproduserbar for å få til reproduserbarhet. Enten i form av peer-review via git eller noe lignende.
 
+![Fra Github.](ass1_insertimage_1.png)
 
+Vi har brukt tre branches og 31 commits (så langt) for å skrive denne oppgaven.
 
-!<a href="https://ibb.co/S39ym11"><img src="https://i.ibb.co/4V5tSDD/Skjermbilde-2020-09-23-kl-14-48-17.png" alt="Skjermbilde-2020-09-23-kl-14-48-17" border="0"></a>)
-Vi har brukt tre branches og 31 commits (så langt) for å skrive denne oppgaven. 
-
-@allaireRmarkdownDynamicDocuments2020
-@AccessPreservationScientific2015
-
+Lagt inn for test av ag (fjern): 
 
 # References
 
-<DIV id="refs<Mitt_bibliotek.bib>/DIV>
-
-
-
+<DIV id="refs"></DIV>
 
 ## Appendiks
 
+![Git history.](git-history.png){width=70%}
 
